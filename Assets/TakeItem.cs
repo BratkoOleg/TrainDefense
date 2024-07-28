@@ -54,24 +54,10 @@ public class TakeItem : MonoBehaviour, ICollectable
 
         if(collision.gameObject.tag == "Train")
         {
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            gameObject.GetComponent<Collider>().isTrigger = true;
             train = collision.gameObject.GetComponent<Transform>();
-            isOnTrain = true;
-        }
-    }
-
-    public void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.tag == "Train")
-        {
-            isOnTrain = false;
-        }
-    }
-
-    public void FixedUpdate()
-    {
-        if(isOnTrain)
-        {
-            gameObject.transform.position += train.position;
+            gameObject.transform.SetParent(train);
         }
     }
 }
