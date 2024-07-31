@@ -11,7 +11,7 @@ public class Spike : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("You touched a spike");
-            collision.gameObject.GetComponent<Health>().GetDamage(damage);
+            collision.gameObject.GetComponent<IDamageable>().GetDamage(damage);
         }
     }
 }
