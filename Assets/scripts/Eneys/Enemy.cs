@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     [SerializeField] private int _health;
     private int _maxHealth = 100;
@@ -28,5 +28,10 @@ public class Enemy : MonoBehaviour
     private void DestroyObj()
     {
         Destroy(gameObject);
+    }
+
+    public void GetDamage(int damage)
+    {
+        HP -= damage;
     }
 }
