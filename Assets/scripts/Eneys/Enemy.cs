@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ememy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health;
     private int _maxHealth = 100;
@@ -16,10 +16,10 @@ public class Ememy : MonoBehaviour
         { 
             _health = value;
             healthBar.ChangeHealth(_health);
-            Debug.Log($"Player {gameObject.name} has hp {HP}");
+            Debug.Log($"Enemy {gameObject.name} has hp {HP}");
             if(_health <= 0)
             {
-                Debug.Log($"Player {gameObject.name} died");
+                Debug.Log($"Enemy {gameObject.name} died");
                 DestroyObj();
             }
         }
