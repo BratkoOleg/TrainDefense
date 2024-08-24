@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamageable
+public class Ememy : MonoBehaviour
 {
     [SerializeField] private int _health;
     private int _maxHealth = 100;
@@ -24,18 +25,7 @@ public class Player : MonoBehaviour, IDamageable
         }
     }
 
-    public void Start()
-    {
-        _health = _maxHealth;
-        healthBar.SetHealth(_maxHealth);
-    }
-
-    public void GetDamage(int damage)
-    {
-        HP -= damage;
-    }
-
-    public void DestroyObj()
+    private void DestroyObj()
     {
         Destroy(gameObject);
     }
