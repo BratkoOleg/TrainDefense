@@ -8,6 +8,8 @@ TagManager:
   - Train
   - Spike
   - Ground
+  - Inventory
+  - ItemSlot
   layers:
   - Default
   - TransparentFX

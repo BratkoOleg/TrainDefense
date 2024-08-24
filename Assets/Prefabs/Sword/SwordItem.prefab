@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2952691068579226452}
+  - component: {fileID: 5108041893126689164}
+  - component: {fileID: 2952691068579226448}
   - component: {fileID: 2952691068579226453}
   - component: {fileID: 2952691068579226450}
   - component: {fileID: 2952691068579226451}
-  - component: {fileID: 2952691068579226448}
   - component: {fileID: -7237337338241128155}
   m_Layer: 0
   m_Name: SwordItem
@@ -36,6 +37,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &5108041893126689164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952691068579226449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177aad8cd1943aa4a94b1f13f62d1624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventory: {fileID: 0}
+  _prefab: {fileID: 6808203369674750996, guid: 0226b869bb827bf478785569d656663b, type: 3}
+  _iconInventory: {fileID: 21300000, guid: 71c21d8c1e1bfdc47932a8027c8102ca, type: 3}
+  _name: Sword
+--- !u!114 &2952691068579226448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952691068579226449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11f2859ba30a8e489eaf1bef2b0d060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconInv: {fileID: 21300000, guid: 71c21d8c1e1bfdc47932a8027c8102ca, type: 3}
+  inventory: {fileID: 0}
+  itemName: sword
+  itemObj: {fileID: 6808203369674750996, guid: 0226b869bb827bf478785569d656663b, type: 3}
+  isOnTrain: 0
+  train: {fileID: 0}
 --- !u!33 &2952691068579226453
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99,21 +134,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2952691068579226448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2952691068579226449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11f2859ba30a8e489eaf1bef2b0d060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: sword
-  itemObj: {fileID: 6808203369674750996, guid: 0226b869bb827bf478785569d656663b, type: 3}
-  slot: {fileID: 0}
 --- !u!54 &-7237337338241128155
 Rigidbody:
   m_ObjectHideFlags: 0

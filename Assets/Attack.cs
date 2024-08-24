@@ -17,6 +17,7 @@ public class Attack : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("isAttacking");
+            anim.SetTrigger("finished");
         }
     }
 }

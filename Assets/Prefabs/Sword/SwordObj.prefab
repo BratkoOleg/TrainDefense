@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b656d2277a5574ebe18ddfc2ec4339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 1
 --- !u!1 &6808203369674750996
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseDamage: 1
-  _radius: 0
+  _radius: 1
 --- !u!114 &3020378612454955872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Sword
   prefabDroppedItem: {fileID: 2952691068579226449, guid: 24af2a0c9dc35da48a3d738216494d16, type: 3}
+  inv: {fileID: 0}
+  indexInInv: 0
 --- !u!33 &5277626067535254500
 MeshFilter:
   m_ObjectHideFlags: 0

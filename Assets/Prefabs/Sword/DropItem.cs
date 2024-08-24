@@ -14,24 +14,33 @@ public class DropItem : MonoBehaviour, IDropable
 {
     public string nameItem;
     public GameObject prefabDroppedItem;
+    [SerializeField] private Inventory inv;
+    public int indexInInv;
+    
+    public void Start()
+    {
+        inv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+    }
 
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Drop();
-            TurnOffItem();
+                Drop();
+                TurnOffItem();
+            
         }
     }
 
     public void TurnOffItem()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     public void Drop()
     {
         GameObject item = Instantiate(prefabDroppedItem, transform.position, Quaternion.identity);
-        item.GetComponent<TakeItem>().TakeLink(gameObject);
+        item.GetComponent<TakeItem>().inventory = inv;
+        inv.RemoveObject(indexInInv);
     }
 }

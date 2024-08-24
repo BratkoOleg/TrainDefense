@@ -1,41 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public interface ICollectable
-{
-    public void Collect(GameObject player);
-    public void DestroyItem();
-}
+using UnityEngine.UI;
 
 public class TakeItem : MonoBehaviour, ICollectable
 {
+    public Sprite iconInv;
+    public Inventory inventory;
     public string itemName;
     public GameObject itemObj;
     public bool isOnTrain;
     public Transform train;
 
-    public void TakeLink(GameObject itemObjLink)
+    private void Start()
     {
-        itemObj = itemObjLink;
+        inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
+
+    // public void TakeLink(GameObject itemObjLink)
+    // {
+    //     itemObj = itemObjLink;
+    // }
 
     public void Collect(GameObject player)
     {
-        if(itemObj != null)
+        if(inventory.CheckSlots())
         {
-            Debug.Log($"{player.name} took {itemName}");
-            itemObj.SetActive(true);
-            // GameObject item = Instantiate(itemObj, slot.position, Quaternion.identity);
-            // item.transform.position = slot.position;
-            // item.transform.rotation = slot.rotation;
-            // item.transform.SetParent(slot);
-            // // itemObj.SetActive(true);
-            DestroyItem();
+            if(itemObj != null)
+            {
+                Debug.Log($"{player.name} took {itemName}");
+                GameObject gameObjectInst = Instantiate(itemObj);
+                gameObjectInst.transform.SetParent(GameObject.FindGameObjectWithTag("ItemSlot").gameObject.transform);
+                int index = inventory.AddItemInInventory(iconInv, gameObjectInst);
+                gameObjectInst.GetComponent<DropItem>().indexInInv = index;
+                Inventory.CurrentObjectInHand = index;
+                DestroyItem();
+            }
+            else
+            {
+                Debug.Log("Dont have obj link");
+            }
         }
         else
         {
-            Debug.Log("Dont have obj link");
+            Debug.Log("You dont have space in inv");
         }
     }
 
