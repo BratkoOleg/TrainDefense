@@ -8,10 +8,10 @@ public class Spike : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.layer == 6)
         {
             Debug.Log("You touched a spike");
-            collision.gameObject.GetComponent<IDamageable>().GetDamage(damage);
+            collision.gameObject.GetComponent<Health>().GetDamage(damage);
         }
     }
 }

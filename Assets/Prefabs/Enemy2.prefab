@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1388649290}
   - component: {fileID: 1388649293}
   - component: {fileID: 4129506702566091078}
-  - component: {fileID: 2921502087608799143}
+  - component: {fileID: 3204679012122461450}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
-  _speed: 1
+  _speed: 0.5
 --- !u!114 &1388649289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  maxHealth: 3
+  maxHealth: 5
   curHealth: 0
 --- !u!114 &1388649290
 MonoBehaviour:
@@ -111,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &2921502087608799143
+--- !u!136 &3204679012122461450
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

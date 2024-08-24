@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 161584659}
   - component: {fileID: 161584658}
   - component: {fileID: 161584657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 231504738}
   - component: {fileID: 231504740}
   - component: {fileID: 231504739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 394878953}
   - component: {fileID: 394878952}
   - component: {fileID: 394878955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Panel
   m_TagString: Inventory
   m_Icon: {fileID: 0}
@@ -298,6 +298,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slots: []
   hasItem: 
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   hand: {fileID: 968960799}
   icon: {fileID: 5292820206386696595, guid: 360e1a6b88995c448b0756f9772ace99, type: 3}
 --- !u!1 &481646502
@@ -311,7 +317,7 @@ GameObject:
   - component: {fileID: 481646503}
   - component: {fileID: 481646505}
   - component: {fileID: 481646504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864834621}
   - component: {fileID: 864834622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 968960799}
   - component: {fileID: 1065985780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ItemSlotRight
   m_TagString: ItemSlot
   m_Icon: {fileID: 0}
@@ -486,7 +492,7 @@ GameObject:
   - component: {fileID: 993808827}
   - component: {fileID: 993808829}
   - component: {fileID: 993808828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +568,7 @@ GameObject:
   - component: {fileID: 1289875953}
   - component: {fileID: 1289875955}
   - component: {fileID: 1289875954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +644,7 @@ GameObject:
   - component: {fileID: 1411664612}
   - component: {fileID: 1411664614}
   - component: {fileID: 1411664613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133924518834205527}
   - component: {fileID: 7815701806435543797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,12 +810,13 @@ GameObject:
   - component: {fileID: 4459864850019384738}
   - component: {fileID: 3730056593975518715}
   - component: {fileID: 284099250785248992}
+  - component: {fileID: 584053255230038644}
   - component: {fileID: 4459864850019384739}
   - component: {fileID: 4459864850019384736}
   - component: {fileID: 4459864850019384741}
   - component: {fileID: 4459864850019384740}
   - component: {fileID: 638435120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirstPersonController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -845,7 +852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
-  _maxHealth: 100
   healthBar: {fileID: 284099250785248992}
 --- !u!114 &284099250785248992
 MonoBehaviour:
@@ -862,6 +868,20 @@ MonoBehaviour:
   image: {fileID: 2053495347596450520}
   maxHealth: 100
   curHealth: 0
+--- !u!114 &584053255230038644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864850019384750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c65c120b437962438a55317e56c2e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  _maxHealth: 100
 --- !u!33 &4459864850019384739
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1010,7 +1030,7 @@ GameObject:
   - component: {fileID: 4459864850190357392}
   - component: {fileID: 4459864850190357394}
   - component: {fileID: 4459864850190357395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4459864850831721275}
   - component: {fileID: 4459864850831721274}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SprintBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,7 +1157,7 @@ GameObject:
   - component: {fileID: 4459864850888339821}
   - component: {fileID: 4459864850888339823}
   - component: {fileID: 4459864850888339820}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stamina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1214,7 +1234,7 @@ GameObject:
   - component: {fileID: 7136662367678373446}
   - component: {fileID: 4459864851310106426}
   - component: {fileID: 4459864851310106427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1315,7 +1335,7 @@ GameObject:
   - component: {fileID: 4459864851397454649}
   - component: {fileID: 4459864851397454651}
   - component: {fileID: 4459864851397454648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StaminaBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4459864851508666808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Joint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1443,7 @@ GameObject:
   - component: {fileID: 4459864851551516607}
   - component: {fileID: 4459864851551516593}
   - component: {fileID: 4459864851551516606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrosshairAndStamina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1508,7 +1528,7 @@ GameObject:
   - component: {fileID: 4423206230904474439}
   - component: {fileID: 9030369936276877484}
   - component: {fileID: 2053495347596450520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1604,7 @@ GameObject:
   - component: {fileID: 3353587200176844140}
   - component: {fileID: 7609286293639243371}
   - component: {fileID: 163687007964768350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

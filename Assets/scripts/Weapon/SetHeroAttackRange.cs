@@ -37,7 +37,7 @@ public class SetHeroAttackRange : MonoBehaviour
 		if(!allTargets)
 		{
 			GameObject obj = NearTarget(point, colliders);
-			if(obj != null && obj.GetComponent<Health>())
+			if(obj != null && obj.GetComponent<Health>() && obj.tag != "Player")
 			{
 				obj.GetComponent<Health>().GetDamage(damage);
 			}
@@ -46,7 +46,7 @@ public class SetHeroAttackRange : MonoBehaviour
 
 		foreach(Collider hit in colliders) 
 		{
-			if(hit.GetComponent<Health>())
+			if(hit.GetComponent<Health>() && hit.gameObject.tag != "Player")
 			{
 				hit.GetComponent<Health>().GetDamage(damage);
 			}
