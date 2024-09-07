@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private int _amountOfObjects;
 

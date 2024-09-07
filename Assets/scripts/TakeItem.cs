@@ -17,11 +17,6 @@ public class TakeItem : MonoBehaviour, ICollectable
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
 
-    // public void TakeLink(GameObject itemObjLink)
-    // {
-    //     itemObj = itemObjLink;
-    // }
-
     public void Collect(GameObject player)
     {
         if(inventory.CheckSlots())
