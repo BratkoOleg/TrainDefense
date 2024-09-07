@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour, IDamageable
             }
         }
     }
-
+    
     private void DestroyObj()
     {
         Destroy(gameObject);

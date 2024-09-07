@@ -6,15 +6,21 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private int enemyAmount;
-    [SerializeField] private GameObject[] enemysPrefabs;
-    [SerializeField] private int MaxEnemys = 5;
+    private int enemyAmount;
+    private int MaxEnemys = 5;
+    private List<GameObject> _enemys;
 
-    private void Start()
+    public void Init(List<GameObject> pooledEnemys)
     {
-        CheckEnemys();
+        _enemys = pooledEnemys;
+
+        foreach (var enemy in _enemys)
+        {
+            enemy.transform.SetParent(gameObject.transform);
+        }
+
         StartCoroutine(SpawnEnemy());
-    }
+    }   
 
     private IEnumerator SpawnEnemy()
     {
@@ -25,8 +31,8 @@ public class EnemySpawner : MonoBehaviour
             if(enemyAmount < MaxEnemys)
             {
                 yield return new WaitForSeconds(10);
-                GameObject newEnemy = Instantiate(GetRandomEnemy(), gameObject.transform.position, Quaternion.identity);
-                newEnemy.transform.SetParent(gameObject.transform);
+                GameObject newEnemy = GetRandomEnemy();
+                newEnemy.SetActive(true);
                 CheckEnemys();
             }
         }
@@ -34,13 +40,19 @@ public class EnemySpawner : MonoBehaviour
 
     private void CheckEnemys()
     {
-        enemyAmount = gameObject.transform.childCount;
+        int activeObjects = 0;
+        for (int i = 0; i < _enemys.Count; i++)
+        {
+            if(_enemys[i].activeSelf == true)
+                activeObjects++;
+        }
+        enemyAmount = activeObjects;
     }
 
     private GameObject GetRandomEnemy()
     {
         GameObject enemy;
-        enemy = enemysPrefabs[Random.Range(0, enemysPrefabs.Length - 1)];
+        enemy = _enemys[Random.Range(0, _enemys.Count - 1)];
         CheckEnemys();
         return enemy;
     }
