@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SetHeroAttackRange : MonoBehaviour
 {
-    
-	// функция возвращает ближайший объект из массива, относительно указанной позиции
+    // функция возвращает ближайший объект из массива, относительно указанной позиции
 	static GameObject NearTarget(Vector3 position, Collider[] array) 
 	{
 		Collider current = null;
@@ -21,7 +18,6 @@ public class SetHeroAttackRange : MonoBehaviour
 				dist = curDist;
 			}
 		}
-
 		return (current != null) ? current.gameObject : null;
 	}
 

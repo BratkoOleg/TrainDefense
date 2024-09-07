@@ -12,7 +12,6 @@ public class InventorySlotChanger : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
