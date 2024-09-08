@@ -20,9 +20,13 @@ public class TakeItem : MonoBehaviour, ICollectable
         {
             if(itemObj != null)
             {
-                Debug.Log($"{player.name} took {itemName}");
+                Transform itemSlot = GameObject.FindGameObjectWithTag("ItemSlot").gameObject.transform;
+                
                 GameObject gameObjectInst = Instantiate(itemObj);
-                gameObjectInst.transform.SetParent(GameObject.FindGameObjectWithTag("ItemSlot").gameObject.transform);
+                gameObjectInst.transform.position = itemSlot.position;
+                gameObjectInst.transform.SetParent(itemSlot);
+                gameObjectInst.transform.rotation = itemSlot.rotation;
+
                 int index = inventory.AddItemInInventory(iconInv, gameObjectInst);
                 gameObjectInst.GetComponent<DropItem>().indexInInv = index;
                 Inventory.CurrentObjectInHand = index;

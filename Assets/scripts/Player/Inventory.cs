@@ -8,7 +8,6 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<bool> slotIsOccupied;
     [SerializeField] private GameObject[] items = new GameObject[5];
     [SerializeField] private Transform hand;
-    [SerializeField] private GameObject icon;
     private Transform ItemsSlot;
 
     private static int _currentObjectInHand = 0;
@@ -51,7 +50,10 @@ public class Inventory : MonoBehaviour
             if(slotIsOccupied[i] == false)
             {
                 slotIsOccupied[i] = true;
-                GameObject iconObj = Instantiate(this.icon, Slots[i].position, Quaternion.identity);
+                GameObject iconObj = Instantiate(Resources.Load
+                                        (StaticNames.IconInventory, 
+                                        typeof(GameObject))) as GameObject;
+                iconObj.gameObject.transform.position = Slots[i].position;
                 iconObj.gameObject.transform.SetParent(Slots[i]);
                 iconObj.gameObject.GetComponent<Image>().sprite = icon;
                 items[i] = item;

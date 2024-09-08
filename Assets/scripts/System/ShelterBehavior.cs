@@ -11,7 +11,6 @@ public class ShelterBehavior : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("check");
         if (other.gameObject.tag == StaticNames.TrainTag && isEnd == true)
         {
             anim.SetTrigger("Finished");
@@ -26,11 +25,11 @@ public class ShelterBehavior : MonoBehaviour
 
 
 
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
         GameObject screen = Instantiate(Resources.Load
                                         (StaticNames.FinishScreen, 
                                         typeof(GameObject))) as GameObject;
-        Cursor.visible = true;
+        // Cursor.visible = true;
         onFinished?.Invoke();
     }
 }

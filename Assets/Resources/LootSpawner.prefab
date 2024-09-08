@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8713373350810207358
+--- !u!1 &6419140028809698161
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8713373350810207352}
-  - component: {fileID: 8713373350810207353}
+  - component: {fileID: 6419140028809698167}
+  - component: {fileID: 6419140028809698166}
   m_Layer: 0
-  m_Name: ObjectPool
+  m_Name: LootSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8713373350810207352
+--- !u!4 &6419140028809698167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8713373350810207358}
+  m_GameObject: {fileID: 6419140028809698161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,15 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8713373350810207353
+--- !u!114 &6419140028809698166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8713373350810207358}
+  m_GameObject: {fileID: 6419140028809698161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608cc886b9fbb1a4ab01430ea2486261, type: 3}
+  m_Script: {fileID: 11500000, guid: ba0000ee940ee244e91221596083485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lootArray:
+  - {fileID: 1601638767202770906, guid: 4075afa901d529c41939786a5b8e4228, type: 3}
+  - {fileID: 6755846668107387185, guid: 7b33fc67d6b260440aa2beb6462f1b13, type: 3}
+  - {fileID: 3273229392580768145, guid: e06712f90b767934986bb937b1c75508, type: 3}
+  - {fileID: 951856624647534611, guid: 1e5fb683832dbc144b96af1f4d3081c9, type: 3}
+  _minAmount: 5
+  _maxAmount: 10

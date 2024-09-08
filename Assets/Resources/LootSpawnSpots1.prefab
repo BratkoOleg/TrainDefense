@@ -164,6 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182099254579192312}
+  - component: {fileID: -4355595208697997229}
   m_Layer: 0
   m_Name: LootSpawnSpots1
   m_TagString: Untagged
@@ -201,6 +202,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4355595208697997229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182099254579192315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83050ec3e6cd6544c9e661283b71ccce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182099254582989641
 GameObject:
   m_ObjectHideFlags: 0
