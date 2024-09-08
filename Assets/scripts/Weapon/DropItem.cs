@@ -26,9 +26,8 @@ public class DropItem : MonoBehaviour, IDropable
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
-                Drop();
-                TurnOffItem();
-            
+            Drop();
+            TurnOffItem();
         }
     }
 

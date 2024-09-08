@@ -56,12 +56,12 @@ GameObject:
   - component: {fileID: 5097354664871401352}
   - component: {fileID: 6393294716486553201}
   - component: {fileID: 3020378612454955872}
+  - component: {fileID: -8061652019246067239}
+  - component: {fileID: 1792802535568777315}
   - component: {fileID: 5277626067535254500}
   - component: {fileID: 3425834031094103793}
   - component: {fileID: 7108481976551544776}
   - component: {fileID: 8129985368948658083}
-  - component: {fileID: -8061652019246067239}
-  - component: {fileID: 1792802535568777315}
   m_Layer: 0
   m_Name: SwordObj
   m_TagString: Untagged
@@ -116,6 +116,31 @@ MonoBehaviour:
   prefabDroppedItem: {fileID: 2952691068579226449, guid: 24af2a0c9dc35da48a3d738216494d16, type: 3}
   inv: {fileID: 0}
   indexInInv: 0
+--- !u!114 &-8061652019246067239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808203369674750996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290f4961c2ac0441a32735c66e108b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+--- !u!114 &1792802535568777315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808203369674750996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e336b19c1048748be18dd84e9a69ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &5277626067535254500
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -200,34 +225,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-8061652019246067239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6808203369674750996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290f4961c2ac0441a32735c66e108b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
---- !u!114 &1792802535568777315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6808203369674750996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e336b19c1048748be18dd84e9a69ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &5731111425246560621
 PrefabInstance:
   m_ObjectHideFlags: 0
