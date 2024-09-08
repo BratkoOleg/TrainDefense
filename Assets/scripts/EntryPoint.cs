@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
@@ -12,12 +10,16 @@ public class EntryPoint : MonoBehaviour
         GameObject player = InstantiateObject(StaticNames.Player);
 
         GameObject objectPoolPrefab = InstantiateObject(StaticNames.ObjectPool);
+
+        GameObject enemySpawnSpots = InstantiateObject(StaticNames.EnemySpawnSpots1);
         
         GameObject enemySpawnerPrefab = InstantiateObject(StaticNames.Spawner);
 
         enemySpawnerPrefab.GetComponent<EnemySpawner>().
                                         Init(objectPoolPrefab.GetComponent<ObjectPool>().
-                                        SpawnObjects(_enemyPrefab, _amountOfObjects));
+                                            SpawnObjects(_enemyPrefab, _amountOfObjects),
+                                            enemySpawnSpots.GetComponent<EnemySpawnSpots>().GetSpots()
+                                            );
     }
 
     private GameObject InstantiateObject(string name)

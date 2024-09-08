@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour, IDamageable
@@ -17,7 +15,7 @@ public class Health : MonoBehaviour, IDamageable
             if(_health <= 0)
             {
                 Debug.Log($"{gameObject.name} died");
-                DestroyObj();
+                Reset();
             }
         }
     }
@@ -32,8 +30,10 @@ public class Health : MonoBehaviour, IDamageable
         HP -= damage;
     }
 
-    public void DestroyObj()
+    public void Reset()
     {
-        Destroy(gameObject);
+        gameObject.transform.position = Vector3.zero;
+        _health = _maxHealth;
+        gameObject.SetActive(false);
     }
 }

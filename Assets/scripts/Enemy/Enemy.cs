@@ -17,14 +17,16 @@ public class Enemy : MonoBehaviour, IDamageable
             if(_health <= 0)
             {
                 Debug.Log($"Enemy {gameObject.name} died");
-                DestroyObj();
+                Reset();
             }
         }
     }
     
-    private void DestroyObj()
+    private void Reset()
     {
-        Destroy(gameObject);
+        gameObject.transform.position = Vector3.zero;
+        _health = _maxHealth;
+        gameObject.SetActive(false);
     }
 
     public void GetDamage(int damage)

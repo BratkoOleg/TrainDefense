@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventorySlotChanger : MonoBehaviour
 {
-
     private Inventory inventory;
     
     void Start()

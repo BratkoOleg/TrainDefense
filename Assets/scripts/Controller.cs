@@ -8,7 +8,6 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        // Сохраняем исходного родителя и компонент Rigidbody
         originalParent = transform.parent;
         rb = GetComponent<Rigidbody>();
     }
@@ -17,7 +16,6 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.name == "ObjectB")
         {
-            // Устанавливаем Объект Б как родителя Объекта А
             transform.parent = collision.transform;
             isOnObjectB = true;
         }
@@ -27,7 +25,6 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.name == "ObjectB")
         {
-            // Восстанавливаем исходного родителя
             transform.parent = originalParent;
             isOnObjectB = false;
         }
@@ -37,7 +34,6 @@ public class Controller : MonoBehaviour
     {
         if (isOnObjectB)
         {
-            // Позволяем Объекту А двигаться, даже когда он на Объекте Б
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
 
