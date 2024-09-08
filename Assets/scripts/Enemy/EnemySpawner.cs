@@ -53,8 +53,7 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject GetRandomEnemy()
     {
-        GameObject enemy = null;
-        // enemy = _enemys[Random.Range(0, _enemys.Count - 1)];
+        GameObject enemy = enemy = _enemys[Random.Range(0, _enemys.Count - 1)];
         for (int i = 0; i < _enemys.Count; i++)
         {
             if(_enemys[i].gameObject.activeSelf == false)
