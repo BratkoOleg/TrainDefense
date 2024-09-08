@@ -9,4 +9,5 @@ public class StaticNames
     public static string FinishScreen = "FinishedScreen";
 
     public static string PlayerTag = "Player";
+    public static string TrainTag = "Train";
 }

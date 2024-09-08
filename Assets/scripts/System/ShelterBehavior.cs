@@ -12,7 +12,7 @@ public class ShelterBehavior : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("check");
-        if (other.gameObject.tag == StaticNames.PlayerTag && isEnd == true)
+        if (other.gameObject.tag == StaticNames.TrainTag && isEnd == true)
         {
             anim.SetTrigger("Finished");
             StartCoroutine(ShowingFinishScreen());
@@ -21,11 +21,11 @@ public class ShelterBehavior : MonoBehaviour
 
     private IEnumerator ShowingFinishScreen()
     {
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //temp solution, want to make a hub instead of just load new scene
 
 
 
-        yield return new WaitForSeconds(5f);
         Time.timeScale = 0f;
         GameObject screen = Instantiate(Resources.Load
                                         (StaticNames.FinishScreen, 

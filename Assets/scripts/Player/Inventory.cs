@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<Transform> Slots;
-    [SerializeField] private List<bool> hasItem;
+    [SerializeField] private List<bool> slotIsOccupied;
     [SerializeField] private GameObject[] items = new GameObject[5];
     [SerializeField] private Transform hand;
     [SerializeField] private GameObject icon;
@@ -36,10 +36,10 @@ public class Inventory : MonoBehaviour
         {
             if(item.childCount > 0)
             {
-                hasItem.Add(true);
+                slotIsOccupied.Add(true);
             }
             else
-                hasItem.Add(false);
+                slotIsOccupied.Add(false);
         }
     }
 
@@ -48,9 +48,9 @@ public class Inventory : MonoBehaviour
         int indexItem = 0;
         for (int i = 0; i < Slots.Count; i++)
         {
-            if(hasItem[i] == false)
+            if(slotIsOccupied[i] == false)
             {
-                hasItem[i] = true;
+                slotIsOccupied[i] = true;
                 GameObject iconObj = Instantiate(this.icon, Slots[i].position, Quaternion.identity);
                 iconObj.gameObject.transform.SetParent(Slots[i]);
                 iconObj.gameObject.GetComponent<Image>().sprite = icon;
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveObject(int index)
     {
-        hasItem[index] = false;
+        slotIsOccupied[index] = false;
         Destroy(Slots[index].gameObject.transform.GetChild(0).gameObject);
         items[index] = null;
         SetCurrentObject(CurrentObjectInHand);
@@ -82,9 +82,9 @@ public class Inventory : MonoBehaviour
     {
         bool hasSpace = false;
         
-        for (int i = 0; i < hasItem.Count; i++)
+        for (int i = 0; i < slotIsOccupied.Count; i++)
         {
-            if(hasItem[i] == false)
+            if(slotIsOccupied[i] == false)
             {
                 hasSpace = true;
                 break;
