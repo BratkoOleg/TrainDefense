@@ -9,6 +9,7 @@ public class TrainFuel : MonoBehaviour
     public Image image;
     public float maxFuel;
     public float curFuel;
+    public bool isInfinite;
 
     void Start()
     {
@@ -17,6 +18,9 @@ public class TrainFuel : MonoBehaviour
 
     public void ChangeFuel(float value)
     {
+        if(isInfinite)
+            value = 0;
+            
         curFuel -= value / 60;
         Debug.Log($"Using {value} fuel");
         float curFuelInPercent = curFuel / maxFuel;
