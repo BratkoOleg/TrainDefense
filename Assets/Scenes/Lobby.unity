@@ -473,6 +473,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &478743508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 341010933, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
+  m_PrefabInstance: {fileID: 1665245058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &478743510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478743508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298d4f98a388ade4f81f24a06ff3ae37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walletUI: {fileID: 0}
 --- !u!1 &575880588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1171,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: train
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 341010937, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
 --- !u!1 &1812162473
 GameObject:

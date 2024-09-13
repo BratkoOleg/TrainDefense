@@ -11,6 +11,7 @@ TagManager:
   - Inventory
   - ItemSlot
   - Enemy
+  - Wallet
   layers:
   - Default
   - TransparentFX

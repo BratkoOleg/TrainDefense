@@ -16,10 +16,13 @@ public class DropItem : MonoBehaviour, IDropable
     public GameObject prefabDroppedItem;
     [SerializeField] private Inventory inv;
     public int indexInInv;
+    [SerializeField] private int ItemCost;
+    private Money money;
     
     public void Start()
     {
         inv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        money = GameObject.FindGameObjectWithTag("Wallet").GetComponent<Money>();
     }
 
     public void Update()
@@ -46,6 +49,7 @@ public class DropItem : MonoBehaviour, IDropable
 
     public void SellItem()
     {
+        money.EncreaseMoney(ItemCost);
         inv.RemoveObject(indexInInv);
         TurnOffItem();
     }
