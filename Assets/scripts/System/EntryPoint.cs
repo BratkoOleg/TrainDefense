@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
+    public bool needTrain;
     public bool needEnemy;
     public bool needLoot;
     public bool isHub;
@@ -17,6 +18,7 @@ public class EntryPoint : MonoBehaviour
     {
         /*
         Player init
+        Train init;
         Object pool init
         Enemy spawn spots init
         Enemy spawner init
@@ -40,6 +42,11 @@ public class EntryPoint : MonoBehaviour
                                                 SpawnObjects(_enemyPrefab, _amountOfObjects),
                                                 enemySpawnSpots.GetComponent<EnemySpawnSpots>().GetSpots()
                                                 );
+        }
+
+        if (needTrain)
+        {
+            GameObject train = InstantiateObject(StaticNames.Train);
         }
 
         if (needLoot)

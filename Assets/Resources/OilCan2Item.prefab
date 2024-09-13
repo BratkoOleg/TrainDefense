@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8672334882723747538}
   m_Layer: 0
   m_Name: OilCan2Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

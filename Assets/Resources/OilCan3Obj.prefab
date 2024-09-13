@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4108014222312036812}
   m_Layer: 0
   m_Name: OilCan3Obj
-  m_TagString: Untagged
+  m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,8 @@ MonoBehaviour:
   prefabDroppedItem: {fileID: 3273229392580768145, guid: e06712f90b767934986bb937b1c75508, type: 3}
   inv: {fileID: 0}
   indexInInv: 0
+  ItemCost: 0
+  FuelEfficienty: 70
 --- !u!95 &4108014222312036812
 Animator:
   serializedVersion: 5

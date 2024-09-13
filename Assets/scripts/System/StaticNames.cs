@@ -6,6 +6,7 @@ public class StaticNames
 
     public static string EnemySpawner = "Spawner";
     public static string Player = "FirstPersonController";
+    public static string Train = "train";
     public static string ObjectSpawner = "ObjectSpawner";
 
     public static string ObjectPool = "ObjectPool";

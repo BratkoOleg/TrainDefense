@@ -663,6 +663,10 @@ PrefabInstance:
       propertyPath: needEnemy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4027427842608406311, guid: 6cec25f06109d95438bd99704d3d2ad2, type: 3}
+      propertyPath: needTrain
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cec25f06109d95438bd99704d3d2ad2, type: 3}
 --- !u!1 &962053997
@@ -1115,13 +1119,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 341010933, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
+      propertyPath: m_TagString
+      value: Wallet
+      objectReference: {fileID: 0}
     - target: {fileID: 2901338632470618903, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2901338632470618903, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2901338633321974808, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
       propertyPath: m_RootOrder
@@ -1170,6 +1178,10 @@ PrefabInstance:
     - target: {fileID: 2901338633321974811, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
       propertyPath: m_Name
       value: train
+      objectReference: {fileID: 0}
+    - target: {fileID: 2901338633321974811, guid: 5037697c6d86caf449ce7555de895e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 341010937, guid: 5037697c6d86caf449ce7555de895e03, type: 3}

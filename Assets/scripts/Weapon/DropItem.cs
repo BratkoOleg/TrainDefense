@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 interface IDropable
 {
@@ -18,12 +19,17 @@ public class DropItem : MonoBehaviour, IDropable
     public int indexInInv;
     [SerializeField] private int ItemCost;
     private Money money;
+    public float FuelEfficienty;
     
     public void Start()
     {
         inv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-        money = GameObject.FindGameObjectWithTag("Wallet").GetComponent<Money>();
-    }
+
+        if (SceneManager.GetActiveScene().name == "Lobby")
+        {
+            money = GameObject.FindGameObjectWithTag("Wallet").GetComponent<Money>();
+        }   
+}
 
     public void Update()
     {
@@ -37,6 +43,12 @@ public class DropItem : MonoBehaviour, IDropable
     public void TurnOffItem()
     {
         Destroy(gameObject);
+    }
+
+    public void Burn()
+    {
+        inv.RemoveObject(indexInInv);
+        TurnOffItem(); 
     }
 
     public void Drop()
