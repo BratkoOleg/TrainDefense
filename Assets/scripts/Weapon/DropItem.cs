@@ -41,5 +41,12 @@ public class DropItem : MonoBehaviour, IDropable
         GameObject item = Instantiate(prefabDroppedItem, transform.position, Quaternion.identity);
         item.GetComponent<TakeItem>().inventory = inv;
         inv.RemoveObject(indexInInv);
+        TurnOffItem();
+    }
+
+    public void SellItem()
+    {
+        inv.RemoveObject(indexInInv);
+        TurnOffItem();
     }
 }

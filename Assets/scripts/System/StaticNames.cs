@@ -15,5 +15,6 @@ public class StaticNames
     public static string SwordObject = "SwordItem";
 
     public static string PlayerTag = "Player";
+    public static string PlayerHandTag = "ItemSlot";
     public static string TrainTag = "Train";
 }

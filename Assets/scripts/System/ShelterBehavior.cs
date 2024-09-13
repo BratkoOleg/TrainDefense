@@ -8,6 +8,7 @@ public class ShelterBehavior : MonoBehaviour
     [SerializeField] private bool isEnd;
     [SerializeField] private Animator anim;
     public static Action onFinished;
+    public int SceneIndex;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -21,7 +22,7 @@ public class ShelterBehavior : MonoBehaviour
     private IEnumerator ShowingFinishScreen()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //temp solution, want to make a hub instead of just load new scene
+        SceneManager.LoadScene(SceneIndex); //temp solution, want to make a hub instead of just load new scene
 
 
 
