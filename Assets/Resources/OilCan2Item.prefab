@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4214457861001645624}
   - component: {fileID: 4408903593594657710}
   - component: {fileID: 8672334882723747538}
+  - component: {fileID: -1320645321407058004}
   m_Layer: 0
   m_Name: OilCan2Item
   m_TagString: Item
@@ -98,6 +99,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-1320645321407058004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755846668107387185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6d59bc7e2eff542b1355b41777d4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ID: 1
 --- !u!1 &6755846668107387187
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class TakeItem : MonoBehaviour, ICollectable
 {
@@ -45,6 +48,13 @@ public class TakeItem : MonoBehaviour, ICollectable
 
     public void DestroyItem()
     {
+        gameObject.transform.position = new Vector3(0,-10,0);
+        StartCoroutine(WaitToDestroy());
+    }
+
+    private IEnumerator WaitToDestroy()
+    {
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 

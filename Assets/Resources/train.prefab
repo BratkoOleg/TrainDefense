@@ -698,6 +698,8 @@ GameObject:
   - component: {fileID: 2901338631781242312}
   - component: {fileID: 2901338631781242359}
   - component: {fileID: 1931421932}
+  - component: {fileID: 2269722551591243866}
+  - component: {fileID: 7198828466226042594}
   m_Layer: 0
   m_Name: floor
   m_TagString: Train
@@ -808,6 +810,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsList: []
+  ItemsIds: []
+--- !u!114 &2269722551591243866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901338631781242314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbce36ba20cba8e458b5ed0b1471eb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 1601638767202770906, guid: 4075afa901d529c41939786a5b8e4228, type: 3}
+  - {fileID: 6755846668107387185, guid: 7b33fc67d6b260440aa2beb6462f1b13, type: 3}
+  - {fileID: 3273229392580768145, guid: e06712f90b767934986bb937b1c75508, type: 3}
+  - {fileID: 951856624647534611, guid: 1e5fb683832dbc144b96af1f4d3081c9, type: 3}
+  - {fileID: 2952691068579226449, guid: 24af2a0c9dc35da48a3d738216494d16, type: 3}
+--- !u!114 &7198828466226042594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901338631781242314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49772a9d178e4b94fbbccbdf8c80eca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemStorage: {fileID: 1931421932}
 --- !u!1 &2901338632057871822
 GameObject:
   m_ObjectHideFlags: 0
