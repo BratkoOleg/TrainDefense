@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3719630142666262243}
   - component: {fileID: 341010936}
   - component: {fileID: 341010935}
+  - component: {fileID: 478743510}
   m_Layer: 5
   m_Name: Money
-  m_TagString: Untagged
+  m_TagString: Wallet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +150,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &478743510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341010933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298d4f98a388ade4f81f24a06ff3ae37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walletUI: {fileID: 0}
 --- !u!1 &2901338631477409890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trainFuel: {fileID: 2901338633321974809}
   amountFuel: 1
+  playerHand: {fileID: 0}
 --- !u!1 &2901338633211852588
 GameObject:
   m_ObjectHideFlags: 0
