@@ -48,8 +48,9 @@ public class ItemStorage : MonoBehaviour
             ItemsList.Remove(other.gameObject);
             ItemsIds.Remove(other.gameObject.GetComponent<Item>().itemID);
             // ID--;
-
-            onItemRemoved?.Invoke();
+            itemsListClass.ItemsList = ItemsIds;
+            onItemAdded?.Invoke(itemsListClass);
+            // onItemRemoved?.Invoke();
         }
     }
 }
